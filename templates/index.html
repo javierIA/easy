@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <header>
+{% include 'html/header.html' %}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
+ </header>
+  <body  class="bg-gray-100 font-family-karla flex">
+    
+ 
+{% include 'html/menu.html' %}
+<div class="w-full overflow-x-hidden border-t flex flex-col p-6 ">
+    <h1 class="text-3xl text-black pb-6">Home
+
+    </h1>
+    <section
+    id="app"       
+    class="bg-white">
+    <class="overflow-x-auto relative">
+    </class>
+    
+</section>
+
+
+
+</div>
+    <!-- Jquery -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <!-- DataTables -->
+     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
+    <!-- AlpineJS -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+  </body>
+  <script>
+    var table=document.querySelector('#tableinvoices');
+    var dataTable=new DataTable(table);  
+    </script>
+</html>

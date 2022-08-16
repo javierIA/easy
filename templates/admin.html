@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+ <header>
+{% include 'html/header.html' %}
+ </header>
+  <body  class="bg-gray-100 font-family-karla flex">
+    
+ 
+{% include 'html/menu.html' %}
+<div class="w-full overflow-x-hidden border-t flex flex-col p-6 ">
+
+<h1 class="text-3xl text-black pb-6">Admin
+
+</h1>
+<div class="flex items-center justify-center">
+   
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-4 gap-4">
+        <div class="bg-gray-600 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-gray-800 dark:border-gray-600 text-white font-medium group">
+          <div class="flex justify-center items-center w-14 h-14  rounded-full transition-all duration-300 transform group-hover:rotate-12">
+            <i class="fa fa-file-pdf fa-2x bg-gray-600"></i>
+          </div>
+          <div class="text-right">
+            <p class="text-2xl">1,257</p>
+            <p>Invoices</p>
+          </div>
+        </div>
+        <div class="bg-gray-600 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-gray-800 dark:border-gray-600 text-white font-medium group">
+          <div class="flex justify-center items-center w-14 h-14 rounded-full transition-all duration-300 transform group-hover:rotate-12">
+            <i class="fa fa-users fa-2x bg-gray-600"></i>
+
+        </div>
+          <div class="text-right">
+            <p class="text-2xl">10</p>
+            <p>Users</p>
+          </div>
+        </div>
+        <div class="bg-gray-600 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-gray-800 dark:border-gray-600 text-white font-medium group">
+          <div class="flex justify-center items-center w-14 h-14 rounded-full transition-all duration-300 transform group-hover:rotate-12">
+            <i class="fa fa-trailer fa-2x bg-gray-600"></i>
+          </div>
+          <div class="text-right">
+            <p class="text-2xl">Items</p>
+            <p>9000</p>
+          </div>
+        </div>
+        <div class="bg-gray-600 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-gray-800 dark:border-gray-600 text-white font-medium group">
+          <div class="flex justify-center items-center w-14 h-14  rounded-full transition-all duration-300 transform group-hover:rotate-12">
+            <i class="fa fa-compress-alt fa-2x bg-gray-600"></i>
+          </div>
+          <div class="text-right">
+            <p class="text-2xl">1000</p>
+            <p>Last Month</p>
+            </p>
+          </div>
+        </div>
+
+      </div>
+        
+        
+   
+    
+</div> 
+<div class="grid grid-cols-1 lg:grid-cols-2 p-4 gap-4">
+
+<div class="relative flex flex-col min-w-0 mb-4 lg:mb-0 break-words bg-gray-50 dark:bg-gray-800 w-full shadow-md rounded">
+    <div class="rounded-t mb-0 px-0 border-0">
+      <div class="flex flex-wrap items-center px-4 py-2">
+        <div class="relative w-full max-w-full flex-grow flex-1">
+          <h3 class="font-semibold text-base text-gray-900 dark:text-gray-50">Providers</h3>
+        </div>
+        
+      </div>
+      <div class="block w-full overflow-x-auto">
+        <table class="items-center w-full bg-transparent border-collapse">
+          <thead>
+            <tr>
+              <th class="px-4 bg-gray-100 dark:bg-gray-600 text-gray-500 dark:text-gray-100 align-middle border border-solid border-gray-200 dark:border-gray-500 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">Referral</th>
+              <th class="px-4 bg-gray-100 dark:bg-gray-600 text-gray-500 dark:text-gray-100 align-middle border border-solid border-gray-200 dark:border-gray-500 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">Num Invoices</th>
+              <th class="px-4 bg-gray-100 dark:bg-gray-600 text-gray-500 dark:text-gray-100 align-middle border border-solid border-gray-200 dark:border-gray-500 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left min-w-140-px"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-gray-700 dark:text-gray-100">
+              <th class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">Hubbel</th>
+              <td class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">5,480</td>
+              <td class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <div class="flex items-center">
+                  <span class="mr-2">70%</span>
+                  <div class="relative w-full">
+                    <div class="overflow-hidden h-2 text-xs flex rounded bg-blue-200">
+                      <div style="width: 70%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-600"></div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-gray-700 dark:text-gray-100">
+              <th class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">Jubiil</th>
+              <td class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">3,380</td>
+              <td class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <div class="flex items-center">
+                  <span class="mr-2">40%</span>
+                  <div class="relative w-full">
+                    <div class="overflow-hidden h-2 text-xs flex rounded bg-blue-200">
+                      <div style="width: 40%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-gray-700 dark:text-gray-100">
+              <th class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">Lau</th>
+              <td class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">4,105</td>
+              <td class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <div class="flex items-center">
+                  <span class="mr-2">45%</span>
+                  <div class="relative w-full">
+                    <div class="overflow-hidden h-2 text-xs flex rounded bg-pink-200">
+                      <div style="width: 45%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-gray-700 dark:text-gray-100">
+              <th class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">MMJ</th>
+              <td class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">4,985</td>
+              <td class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <div class="flex items-center">
+                  <span class="mr-2">60%</span>
+                  <div class="relative w-full">
+                    <div class="overflow-hidden h-2 text-xs flex rounded bg-red-200">
+                      <div style="width: 60%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-gray-700 dark:text-gray-100">
+              <th class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">Sarefin</th>
+              <td class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">2,250</td>
+              <td class="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <div class="flex items-center">
+                  <span class="mr-2">30%</span>
+                  <div class="relative w-full">
+                    <div class="overflow-hidden h-2 text-xs flex rounded bg-blue-200">
+                      <div style="width: 30%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-700"></div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+  </div>    
+  <div class="relative flex flex-col min-w-0 break-words bg-gray-50 dark:bg-gray-800 w-full shadow-lg rounded">
+    <div class="rounded-t mb-0 px-0 border-0">
+      <div class="flex flex-wrap items-center px-4 py-2">
+        <div class="relative w-full max-w-full flex-grow flex-1">
+          <h3 class="font-semibold text-base text-gray-900 dark:text-gray-50">Logs</h3>
+        </div>
+        <div class="relative w-full max-w-full flex-grow flex-1 text-right">        </div>
+      </div>
+      <div class="block w-full">
+        <div class="px-4 bg-gray-100 dark:bg-gray-600 text-gray-500 dark:text-gray-100 align-middle border border-solid border-gray-200 dark:border-gray-500 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+          Today
+        </div>
+        <ul class="my-1">
+          <li class="flex px-4">
+            <div class="w-9 h-9 rounded-full flex-shrink-0 bg-red-500 my-2 mr-3">
+            </div>
+            <div class="flex-grow flex items-center border-b border-gray-100 dark:border-gray-400 text-sm text-gray-600 dark:text-gray-100 py-2">
+              <div class="flex-grow flex justify-between items-center">
+                <div class="self-center">
+                  <a class="font-medium text-gray-800 hover:text-gray-900 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;">User</a> add new invoice <a class="font-medium text-gray-800 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;">Sarefin</a>
+                </div>
+           
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="flex px-4">
+            <div class="w-9 h-9 rounded-full flex-shrink-0 bg-red-500 my-2 mr-3">
+            </div>
+            <div class="flex-grow flex items-center border-gray-100 text-sm text-gray-600 dark:text-gray-50 py-2">
+              <div class="flex-grow flex justify-between items-center">
+                <div class="self-center">
+                  The post <a class="font-medium text-gray-800 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;">User add new invoice</a><a class="font-medium text-gray-800 hover:text-gray-900 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;"></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="px-4 bg-gray-100 dark:bg-gray-600 text-gray-500 dark:text-gray-100 align-middle border border-solid border-gray-200 dark:border-gray-500 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+          Yesterday
+        </div>
+        <ul class="my-1">
+          <li class="flex px-4">
+            <div class="w-9 h-9 rounded-full flex-shrink-0 bg-red-500 my-2 mr-3">
+            </div>
+            <div class="flex-grow flex items-center border-gray-100 text-sm text-gray-600 dark:text-gray-50 py-2">
+              <div class="flex-grow flex justify-between items-center">
+                <div class="self-center">
+                  <a class="font-medium text-gray-800 hover:text-gray-900 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;"></a> Javier add new invoice <a class="font-medium text-gray-800 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;"></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-4 mx-4">
+    <div class="w-full overflow-hidden rounded-lg shadow-xs">
+      <div class="w-full overflow-x-auto">
+        <table class="w-full">
+          <thead>
+            <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+              <th class="px-4 py-3">Users</th>
+              <th class="px-4 py-3">Docuemnts</th>
+              <th class="px-4 py-3">Status</th>
+              <th class="px-4 py-3">Admin</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+            <tr class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
+              <td class="px-4 py-3">
+                <div class="flex items-center text-sm">
+                  <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
+                    <img class="object-cover w-full h-full rounded-full" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=200&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE3Nzg0fQ" alt="" loading="lazy" />
+                    <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                  </div>
+                  <div>
+                    <p class="font-semibold">string</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-400">IA.CENTER</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-sm">888</td>
+              <td class="px-4 py-3 text-xs">
+                <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"> Approved </span>
+              </td>
+              <td class="px-4 py-3 text-sm">No</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>    
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+</html>

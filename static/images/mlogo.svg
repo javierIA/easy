@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg18"
+   width="42.777344"
+   height="27.5"
+   viewBox="0 0 42.777344 27.5"
+   sodipodi:docname="Identidad SPACE (1).pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs22">
+    <linearGradient
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(22.98354,0,0,-22.98354,167.53569,266.80414)"
+       spreadMethod="pad"
+       id="linearGradient548">
+      <stop
+         style="stop-opacity:1;stop-color:#bdbcbc"
+         offset="0"
+         id="stop544" />
+      <stop
+         style="stop-opacity:1;stop-color:#4f4c4d"
+         offset="1"
+         id="stop546" />
+    </linearGradient>
+    <linearGradient
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(30.062742,0,0,-30.062742,163.65622,282.51401)"
+       spreadMethod="pad"
+       id="linearGradient568">
+      <stop
+         style="stop-opacity:1;stop-color:#bdbcbc"
+         offset="0"
+         id="stop564" />
+      <stop
+         style="stop-opacity:1;stop-color:#4f4c4d"
+         offset="1"
+         id="stop566" />
+    </linearGradient>
+    <linearGradient
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(29.076109,0,0,-29.076109,166.66272,272.53806)"
+       spreadMethod="pad"
+       id="linearGradient588">
+      <stop
+         style="stop-opacity:1;stop-color:#bdbcbc"
+         offset="0"
+         id="stop584" />
+      <stop
+         style="stop-opacity:1;stop-color:#4f4c4d"
+         offset="1"
+         id="stop586" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="namedview20"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <g
+     id="g364"
+     inkscape:groupmode="layer"
+     inkscape:label="Page 3"
+     transform="matrix(1.3333333,0,0,-1.3333333,-218.20801,385.14264)">
+    <g
+       id="g532">
+      <g
+         id="g534">
+        <g
+           id="g540">
+          <g
+             id="g542">
+            <path
+               d="m 167.536,271.251 2.046,-9.246 20.937,5.877 c -4.26,1.97 -9.191,3.26 -14.501,3.619 v 0 c -1.01,0.069 -2.01,0.102 -2.999,0.102 v 0 c -1.872,0 -3.704,-0.12 -5.483,-0.352"
+               style="fill:url(#linearGradient548);stroke:none"
+               id="path550" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g552">
+      <g
+         id="g554">
+        <g
+           id="g560">
+          <g
+             id="g562">
+            <path
+               d="m 166.314,276.842 c 11.839,-1.814 22.022,0.289 27.405,3.458 v 0 l -1.253,6.672 -28.81,1.885 z"
+               style="fill:url(#linearGradient568);stroke:none"
+               id="path570" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g572">
+      <g
+         id="g574">
+        <g
+           id="g580">
+          <g
+             id="g582">
+            <path
+               d="m 166.663,275.26 0.65,-2.938 c 2.808,0.463 5.758,0.616 8.788,0.411 v 0 c 5.739,-0.39 11.015,-2.011 15.425,-4.501 v 0 l 4.213,1.182 -1.378,7.43 c -8.995,-3.026 -18.703,-3.597 -27.698,-1.584"
+               style="fill:url(#linearGradient588);stroke:none"
+               id="path590" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       transform="matrix(1,0,0,-0.9997751,193.1875,287.9463)"
+       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.3375px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#7b7979;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="text594"><tspan
+         x="0"
+         y="0"
+         id="tspan592">®</tspan></text>
+  </g>
+</svg>

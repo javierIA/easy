@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+ <header>
+{% include 'html/header.html' %}
+<link
+href="{{url_for('static',path='/css/custom.css')}}"
+rel="stylesheet"
+/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+<link
+href="{{url_for('static',path='/css/tables.css')}}"
+rel="stylesheet"
+/>
+ </header>
+  <body  class="bg-gray-100 font-family-karla flex" x-data="{'isModalOpen': false,'isConfirm':false}" x-on:keydown.escape="isModalOpen=false,isConfirm=false">
+    
+ 
+{% include 'html/menu.html' %}
+<div class="w-full overflow-x-hidden border-t flex flex-col p-6 ">
+    <h1 class="text-3xl text-black pb-6">Items</h1>
+<section
+id="app"       
+class="bg-white" >
+<div class="overflow-x-auto relative shadow-md sm:rounded-lg py-4 px-4 rounded-md">
+    <table id="invoicesTable" class="w-full  responsive stripe hover text-sm text-left text-gray-500 dark:text-gray-400 nowrap"  style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 y-3 px-6 " scope="col">
+          <th scope="col" class="py-3 px-6">Num_invoices</th>
+          <th  scope="col" class="py-3 px-6">Date_invoices</th>
+          <th scope="col" class="py-3 px-6">Origin_invoices</th>
+          <th scope="col" class="py-3 px-6">Total_invoices</th>
+          <th scope="col" class="py-3 px-6">RFC_clients</th>
+          <th scope="col" class="py-3 px-6">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+      </tbody>
+    </table>
+
+  </div>
+</section>
+
+
+</div>
+{% include 'html/modalInvoices.html'%}
+{% include 'html/modalConfirm.html'%}
+
+<div class="overlayScreen" x-show="isModalOpen"  x-cloak ></div>
+<div class="overlayScreen" x-show="isConfirm"  x-cloak ></div>
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- DataTables -->
+  
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+  <script src="{{url_for('static',path='/js/invoices.js')}}"></script>
+
+  
+  <script src="https://unpkg.com/alpinejs@3.1.x/dist/cdn.min.js" defer></script>
+  <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+</html>

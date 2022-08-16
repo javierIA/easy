@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<header>
+{% include 'html/header.html' %}
+ </header>
+<body  class="bg-gray-100 font-family-karla">
+    
+    <div class="lg:flex">
+        <div class="lg:w-1/2 xl:max-w-screen-sm">
+            <div class="py-3 bg-white lg:bg-white flex justify-center lg:justify-start lg:px-10">
+                <div class="cursor-pointer flex items-center">
+                    <img class="w-1/2   self-center" src="{{url_for('static',path='/images/logov1.svg')}}" />
+
+                </div>
+            </div>
+            <div class="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+                <h2 class="text-center text-4xl text-bluee font-display font-semibold lg:text-left xl:text-5xl
+                xl:text-bold">Log in</h2>
+                <div class="mt-12">
+                    <form id="formLogin" action='/SignIn' method='post' >
+                        <div>
+                            <div class="text-sm font-bold text-gray-700 tracking-wide">Email Address</div>
+                            <input name="username" id="username" required class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="" placeholder="javier@gmail.com">
+                        </div>
+                        <div class="mt-8">
+                            <div class="flex justify-between items-center">
+                                <div class="text-sm font-bold text-gray-700 tracking-wide">
+                                    Password
+                                </div>
+                                <div>
+                                    <a href="/ResetPassword" class="text-xs font-display font-semibold text-blue-600 hover:text-blue-800
+                                    cursor-pointer">
+                                        Forgot Password?
+                                    </a>
+                                </div>
+                            </div>
+                            <input name="password" id="password" required class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-blue-900" type="password" placeholder="Enter your password">
+                        </div>
+                        <div class="mt-10">
+                            <button type="summit" hf="" class=" text-gray-100 p-4 w-full rounded-full tracking-wide
+                            font-semibold font-display focus:outline-none focus:shadow-outline bg-gray-600 hover:bg-gray-400
+                            shadow-lg">
+                                Log In
+                            </button>
+                        </div>
+                    </form>
+                    <div class="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
+                        Don't have an account ? <a class="cursor-pointer text-blue-600 hover:text-indigo-800">Send requets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden lg:flex items-center justify-center bg-transparent flex-1 h-screen">
+            <div class="w-full h-full bg-no-repeat bg-cover "
+            style="background-image: url('https://images.pexels.com/photos/2217513/pexels-photo-2217513.jpeg?cs=srgb&dl=pexels-tom-fisk-2217513.jpg')">
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    </body>
+    </html>
