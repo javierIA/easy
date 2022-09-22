@@ -76,7 +76,6 @@ $('#tableItems').submit(function(e){
 $('#tableDelete').submit(function(e){
     e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
     item_id = parseInt(row.find('td:eq(0)').text()); //capturo el ID
-
     console.log(Id_items);
     $.ajax({
         url: "/api/items/delete/"+Id_items,

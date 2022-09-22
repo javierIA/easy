@@ -21,7 +21,7 @@
 		}
 		
 		/*Pagination Buttons*/
-		.dataTables_wrapper .dataTables_paginate .paginate_button		{
+		.dataTables_wrapper .dataTables_paginate .paginate_button .paging_simple_numbers	{
 			font-weight: 700;				/*font-bold*/
 			border-radius: .25rem;			/*rounded*/
 			border: 1px solid transparent;	/*border border-transparent*/
@@ -53,3 +53,16 @@
 			margin-top: 0.75em;
 			margin-bottom: 0.75em;
 		}
+
+		.dataTables_length {
+		
+			background-color: transparent;
+			border: none;
+			padding: 0 1em 0 0;
+			margin: 0;
+			width: 100%;
+			font-family: inherit;
+			font-size: inherit;
+			cursor: inherit;
+			line-height: inherit;
+		  }

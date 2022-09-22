@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <header>
+{% include 'html/header.html' %}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
+ </header>
+  <body  class="bg-gray-100 font-family-karla flex">
+    
+ 
+{% include 'public/html/menu.html' %}
+<div class="w-full overflow-x-hidden border-t flex flex-col p-6 ">
+    <h1 class="text-3xl text-black pb-6">Home
+
+    </h1>
+    <section
+    id="app"       
+    class="bg-white">
+    <div class="overflow-x-auto relative shadow-md sm:rounded-lg py-4 px-4 rounded-md">
+    <table id="invoicesTable" class="w-full  responsive stripe hover text-sm text-left text-gray-500 dark:text-gray-400 nowrap"  style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 y-3 px-6 " scope="col">
+          <th scope="col" class="py-3 px-6">Id </th>
+          <th  scope="col" class="py-3 px-6">Author</th>
+          <th scope="col" class="py-3 px-6">Path</th>
+          <th scope="col" class="py-3 px-6">Satus</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+      </tbody>
+    </table>
+
+  </div>
+    
+</section>
+
+
+
+</div>
+    <!-- Jquery -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <!-- DataTables -->
+     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
+    <!-- AlpineJS -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+  </body>
+  <script>
+    console.log("{{username}}")
+    $(document).ready(function(){
+        const url = '/api/pdfs/{{username}}';
+    
+    
+    tableInvoices=$('#invoicesTable').DataTable({
+            ajax:{
+                url:url,
+                dataSrc:''
+            },
+            columns:[
+                {data: "id_pdfs"},
+                {data: "author_pdfs"},
+                {data: "path_pdfs"},
+                {data: "status_pdfs"}],
+            responsive: true
+          
+        });
+    
+  
+    
+    });
+    
+    </script>
+</html>

@@ -20,7 +20,7 @@ class AuthHandler():
         payload = {
             'exp': datetime.utcnow() + timedelta(days=1, minutes=60),
             'iat': datetime.utcnow(),
-            'sub': user_id
+            'sub': user_id,
         }
         return jwt.encode(
             payload,

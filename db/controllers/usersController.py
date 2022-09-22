@@ -7,8 +7,6 @@ def get_users():
 def get_user(email):
     return db.session.query(User).filter_by(email_users=email).first()
 def get_user_by_username(username):
-    db.session.begin()
-
     return db.session.query(User).filter_by(username_users=username).first()
 
 def add_user(email, password, isadmin, username):
@@ -26,6 +24,7 @@ def update_user(email, password, isadmin, username):
     return user
 def delete_user(email):
     user = get_user(email)
+    db.session.begin()
     db.session.delete(user)
     db.session.commit()
     return user
@@ -35,3 +34,7 @@ def update_user_password(email, password):
     user.password_users = password
     db.session.commit()
     return user
+
+def is_admin(email):
+    user = get_user(email)
+    return user.isadmin_users

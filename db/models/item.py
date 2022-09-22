@@ -1,4 +1,4 @@
-import db.db.db as db
+from db.db import db
 from sqlalchemy import Column,VARCHAR,Integer,Float
 class Item(db.Base):
     __tablename__ = 'items'

@@ -1,6 +1,5 @@
 from db.db import db
 from ..models.provider import Provider
-from sqlalchemy.orm import Session
 
 def get_providers():
     return db.session.query(Provider).all()
