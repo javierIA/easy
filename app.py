@@ -1,3 +1,4 @@
+from importlib.resources import path
 import os
 from re import A
 from webbrowser import get 
@@ -18,7 +19,8 @@ import shutil
 import pydantic
 from typing import List
 import aiofiles
-import utils
+import datetime
+from pathlib import Path
 app=FastAPI()
 app.mount("/static",StaticFiles(directory="static"),name="static")
 app.add_middleware(GZipMiddleware)
@@ -129,19 +131,26 @@ async def invoices(request:Request,username=Depends(auth_handler.auth_wrapper)):
 @app.post("/upload")
 async def upload_post(files: List[UploadFile] = File(...),username=Depends(auth_handler.auth_wrapper)):
     try:
+        path=Path("pdfs"+"/"+username)
+        
+        #create folder if not exist
+        if not path.exists():
+            path.mkdir(parents=True, exist_ok=True)
+    
+            
         for file in files:
-            destination_file_path = "./pdfs/"+file.filename #output file path
+            destination_file_path = "./pdfs/"+file.filename 
             if os.path.exists(destination_file_path):
                 os.remove(destination_file_path)
             async with aiofiles.open(destination_file_path, 'wb') as out_file:
                 while content := await file.read(1024):
                     await out_file.write(content) 
-            #Overwrite the file if it already exists.
-            #If you don't want to overwrite a file, then do this
+            #rename file whith username and date and move to pdfs with username folder
             
-            if " " in file.filename:
-                os.rename(destination_file_path,destination_file_path.replace(" ","_"))
-            #get abusolute path of file
+            #if path.exists(destination_file_path):
+            shutil.move(destination_file_path, "./pdfs/"+username+"/"+datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")+"_"+file.filename)
+        
+            destination_file_path = "./pdfs/"+username+"/"+datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")+"_"+file.filename
             absolute_path = os.path.abspath(destination_file_path)
             add_pdf(username,absolute_path)
             
