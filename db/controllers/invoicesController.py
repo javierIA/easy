@@ -33,3 +33,5 @@ def delete_invoice(num):
     db.session.delete(invoice)
     db.session.commit()
     return invoice
+def getmaxInvoices():
+    return db.session.query(Invoice).count()

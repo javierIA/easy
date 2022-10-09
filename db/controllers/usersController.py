@@ -38,3 +38,5 @@ def update_user_password(email, password):
 def is_admin(email):
     user = get_user(email)
     return user.isadmin_users
+def getmaxUsers():
+    return db.session.query(User).count()

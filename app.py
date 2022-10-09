@@ -1,15 +1,16 @@
 from importlib.resources import path
 import os
 from re import A
+import re
 from webbrowser import get 
 from fastapi import FastAPI, Request, Form,File,UploadFile,Depends
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.gzip import GZipMiddleware
-from db.controllers.invoicesController import delete_invoice, get_invoices, update_invoice
-from db.controllers.itemsController import get_items, get_item, add_item, update_item, delete_item
+from db.controllers.invoicesController import delete_invoice, get_invoices, getmaxInvoices, update_invoice
+from db.controllers.itemsController import get_items, get_item, add_item, getmaxItems, update_item, delete_item
 from db.controllers.pdfController import get_pdf_by_author,add_pdf
-from db.controllers.usersController import get_user_by_username, get_users, get_user, add_user, is_admin, delete_user, update_user_password,update_user
+from db.controllers.usersController import get_user_by_username, get_users, get_user, add_user, getmaxUsers, is_admin, delete_user, update_user_password,update_user
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import RedirectResponse
 from auth.emailtools import welcome
@@ -105,9 +106,12 @@ async def index(request:Request,username=Depends(auth_handler.auth_wrapper)):
 
 @app.get("/admin")
 async def index(request:Request,username=Depends(auth_handler.auth_wrapper)):
+    itemsmax=getmaxItems()
+    invoicesmax=getmaxInvoices()
+    usermax=getmaxUsers()
     if not is_admin(username):
-        return templates.TemplateResponse("public/index.html", {"request": request})
-    return templates.TemplateResponse("admin.html",{"request":request})
+        return templates.TemplateResponse("public/index.html", {"request": request,"username":username})
+    return templates.TemplateResponse("admin.html",{"request":request,"username":username,"itemsmax":itemsmax,"invoicesmax":invoicesmax,"usermax":usermax})
 
 
 @app.get("/login")
@@ -117,13 +121,13 @@ async def login(request:Request):
 @app.get("/upload")
 async def upload(request:Request,username=Depends(auth_handler.auth_wrapper)):
     if not is_admin(username):
-        return templates.TemplateResponse("public/upload.html", {"request": request})
-    return templates.TemplateResponse("upload.html",{"request":request})
+        return templates.TemplateResponse("public/upload.html", {"request": request,"username":username})
+    return templates.TemplateResponse("upload.html",{"request":request,"username":username})
 
 
 @app.get("/invoices")
 async def invoices(request:Request,username=Depends(auth_handler.auth_wrapper)):
-    return templates.TemplateResponse("invoicestable.html",{"request":request})
+    return templates.TemplateResponse("invoicestable.html",{"request":request,"username":username,"invoices":get_invoices()})
 
 
 
@@ -183,7 +187,8 @@ async def delete_items(Id_items:str,request: Request,username=Depends(auth_handl
 
 @app.get("/items")
 async def items(request:Request,username=Depends(auth_handler.auth_wrapper)):
-    return templates.TemplateResponse("itemstabla.html",{"request":request})
+    print(getmaxItems())
+    return templates.TemplateResponse("itemstabla.html",{"request":request,"username":username,"items":get_items()})
 
 @app.get("/api/invoices/",status_code=200)
 async def invoices(request:Request,username=Depends(auth_handler.auth_wrapper)):

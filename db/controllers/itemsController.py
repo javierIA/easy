@@ -32,4 +32,5 @@ def delete_item(id):
     db.session.delete(item)
     db.session.commit()
     return item
-    
+def getmaxItems():
+    return db.session.query(Item).count()
