@@ -19,6 +19,8 @@ from typing import List
 import aiofiles
 import datetime
 from pathlib import Path
+from a2wsgi import ASGIMiddleware
+
 app=FastAPI()
 app.mount("/static",StaticFiles(directory="static"),name="static")
 app.add_middleware(GZipMiddleware)
@@ -239,6 +241,4 @@ async def userpdf(user:str,username=Depends(auth_handler.auth_wrapper)):
     return pdf
 
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("app:app", host="0.0.0.0", log_level="info",reload=True)
+wsgi_app = ASGIMiddleware(app)
