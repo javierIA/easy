@@ -26,6 +26,7 @@ app.mount("/static",StaticFiles(directory="static"),name="static")
 app.add_middleware(GZipMiddleware)
 auth_handler = AuthHandler()
 users = []
+wsgi_app = ASGIMiddleware(app)
 
 templates=Jinja2Templates(directory="templates")
 
@@ -241,4 +242,3 @@ async def userpdf(user:str,username=Depends(auth_handler.auth_wrapper)):
     return pdf
 
 
-wsgi_app = ASGIMiddleware(app)
