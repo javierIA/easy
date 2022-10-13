@@ -14,11 +14,12 @@ from auth.emailtools import welcome
 from auth.auth import AuthHandler
 import basemodel 
 import shutil
-
+import pydantic
 from typing import List
 import aiofiles
 import datetime
 from pathlib import Path
+from a2wsgi import ASGIMiddleware
 
 app=FastAPI()
 app.mount("/static",StaticFiles(directory="static"),name="static")
@@ -240,3 +241,4 @@ async def userpdf(user:str,username=Depends(auth_handler.auth_wrapper)):
     return pdf
 
 
+wsgi_app = ASGIMiddleware(app)
