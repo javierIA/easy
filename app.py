@@ -1,8 +1,5 @@
 from importlib.resources import path
 import os
-from re import A
-import re
-from webbrowser import get 
 from fastapi import FastAPI, Request, Form,File,UploadFile,Depends
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
