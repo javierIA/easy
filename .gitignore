@@ -2,3 +2,4 @@
 .env
 web.config
 *.pyc 
+__pycache__
