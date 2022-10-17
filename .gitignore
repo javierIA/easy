@@ -3,3 +3,6 @@
 web.config
 *.pyc 
 __pycache__
+*.pyo
+*.pyd
+*.so
