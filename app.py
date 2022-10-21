@@ -1,5 +1,6 @@
 from importlib.resources import path
 import os
+import re
 from fastapi import FastAPI, Request, Form,File,UploadFile,Depends
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
@@ -73,11 +74,29 @@ def SignUp(auth_details: basemodel.SignUpModel):
     try:                                    
         hashed_password = auth_handler.get_password_hash(auth_details.password)
         user=add_user(auth_details.email, hashed_password, auth_details.admin, auth_details.username)
-        welcome(auth_details.email,temp_password=auth_details.password)
+        #redirect to login page
+        
+        #welcome(auth_details.email,temp_password=auth_details.password)
     except Exception as e:
         return {"status" : 409, "message": "Account already exists","error":e.__str__()}
-    return {"status" : 200, "message": "Sign Up successfully." ,"user": user}
+    return RedirectResponse(url="/login",status_code=302)
 
+@app.post("/newuser")
+def SignUp(username: str = Form(), password: str = Form(),email: str = Form(),admin: bool = Form()):
+    if get_user(email) or get_user_by_username(username):
+        return {"status" : 401, "message": "Email id is already register"}
+    try:                                    
+        hashed_password = auth_handler.get_password_hash(password)
+        user=add_user(email, hashed_password, admin, username)
+        #welcome(auth_details.email,temp_password=auth_details.password)
+    except Exception as e:
+        return {"status" : 409, "message": "Account already exists","error":e.__str__()}
+    return  RedirectResponse(url="/login",status_code=302)
+
+
+@app.get("/SignUp")
+def SignUp( request: Request):
+    return templates.TemplateResponse("SignUp.html",{"request":request})
 @app.get("/SignOut")
 def SignOut(request: Request):
     response = RedirectResponse(url="/login",status_code=302)
